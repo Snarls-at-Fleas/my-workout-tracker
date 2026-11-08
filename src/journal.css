@@ -1,0 +1,14 @@
+.journal { margin: 26px 0; }
+.journal h2, .journal h3, .journal h4 { margin-bottom: 6px; }
+.journal p, .journal small { color: #536353; }
+.journal p { margin: 4px 0 12px; }
+.journal article { background: #fffef9; border: 1px solid #dce2d6; border-radius: 16px; padding: 16px; margin: 14px 0; }
+.journal h4 { margin-top: 0; font-size: 16px; }
+.journal fieldset { min-width: 0; border: 0; border-top: 1px solid #dce2d6; padding: 8px 0; margin: 0; }
+.journal legend { font-weight: 600; padding-right: 8px; }
+.journal-fields { display: grid; grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); gap: 8px; }
+.journal-fields label { display: flex; flex-direction: column; justify-content: end; gap: 4px; font-size: 13px; }
+.journal-fields input { width: 100%; min-height: 44px; border: 1px solid #91a28f; border-radius: 8px; padding: 8px; font: inherit; font-size: 16px; }
+.journal-done { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; }
+.journal fieldset small { display: block; }
+

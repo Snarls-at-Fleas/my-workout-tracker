@@ -1,3 +1,5 @@
+import PushJournal from './PushJournal'
+import { sundayKey } from './data/push'
 import { useEffect, useState } from 'react'
 import { schedule } from './data/schedule'
 
@@ -43,13 +45,14 @@ export default function App() {
         <p className="card-caption">{rest ? 'В расписании — время для отдыха.' : 'Один подход за другим.'}</p>
       </section>
       {!isToday && <button className="return-button" type="button" onClick={() => { setNow(new Date()); setChosenDay(null) }}>Вернуться к сегодняшнему дню</button>}
-      <section className="empty">
+      {selected === 0 ? <PushJournal key={sundayKey(now)} date={sundayKey(now)} /> : <section className="empty">
         <div className="empty-icon" aria-hidden="true">{rest ? '☀' : '+'}</div>
         <h2>{rest ? 'Сегодня без упражнений' : 'Упражнения пока не добавлены'}</h2>
         <p>{rest ? 'Можно посмотреть программу других дней в расписании выше.' : 'Здесь появится твой комплекс: упражнения, подходы и повторения.'}</p>
-      </section>
+      </section>}
       <footer>MY WORKOUT <span>Маленькие шаги. Регулярный ритм.</span></footer>
     </main>
   )
 }
+
 
